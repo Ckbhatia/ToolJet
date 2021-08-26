@@ -49,7 +49,7 @@ class QueryManager extends React.Component {
               source = { kind: 'restapi' };
             }
           }
-          //
+          console.log('selectedQuery.options', selectedQuery.options)
           this.setState({
             options: selectedQuery.options,
             selectedDataSource: source,
@@ -59,6 +59,7 @@ class QueryManager extends React.Component {
         } else {
           this.setState({
             options: {},
+            selectedDataSource: null,
             selectedQuery: null,
           });
         }
@@ -349,6 +350,7 @@ class QueryManager extends React.Component {
                       optionsChanged={this.optionsChanged}
                       currentState={currentState}
                       darkMode={this.props.darkMode}
+                      isEditMode={this.props.mode === 'edit'}
                     />
                     <hr></hr>
                     <div className="mb-3 mt-2">
