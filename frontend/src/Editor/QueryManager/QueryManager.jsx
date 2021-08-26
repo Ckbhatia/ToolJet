@@ -49,7 +49,6 @@ class QueryManager extends React.Component {
               source = { kind: 'restapi' };
             }
           }
-          console.log('selectedQuery.options', selectedQuery.options)
           this.setState({
             options: selectedQuery.options,
             selectedDataSource: source,
